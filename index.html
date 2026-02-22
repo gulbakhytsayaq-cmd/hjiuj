@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .top {
+      background-color: violet;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      padding: 0 20px;
+    }
+    .top p {
+      border-right: 1px solid black;
+      padding-right: 10px;
+    }
+    img {
+      width: 150px;
+    }
+    .img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px 40px;
+    }
+    .card {
+      width: 250px;
+      min-height: 150px;
+      border-radius: 20px;
+      border: 1px solid rgb(185, 185, 185);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input {
+      border: 2px solid violet;
+      border-radius: 10px;
+      width: 300px;
+      height: 22px;
+      padding: 6px;
+    }
+    h1 {
+      padding-left: 10px;
+    }
+    button {
+      background-color: violet;
+      height: 40px;
+      border-radius: 15px;
+      border: none;
+      padding: 12px;
+    }
+    button:hover {
+      color: violet;
+      background-color: transparent;
+      border: 1px solid violet;
+    }
+    .search {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="top">
+        <p>intro</p>
+        <p>preview</p>
+        <p>challenge links</p>
+        <p>useful resources</p>
+        <p>hints</p>
+        <p>api url</p>
+      </div>
+
+      <h1>What will you build?</h1>
+
+      <div class="img">
+        <img src="uranus.png" alt="" />
+        <h1>WIKIPEDIA API</h1>
+
+        <div class="search">
+          <input type="text" placeholder="Enter an article name" />
+          <button>search</button>
+        </div>
+      </div>
+
+      <div class="cards">
+        <!--
+        <div class="card">
+          <img src="IMAGE_URL" alt="TITLE">
+          <h2>TITLE</h2>
+          <p>DESCRIPTION</p>
+          <b>TAGS</b>
+        </div>
+        -->
+      </div>
+    </div>
+    <script>
+      const btn = document.querySelector("button");
+      const input = document.querySelector("input");
+      const box = document.querySelector(".cards");
+      const URL = "./data.json";
+
+      btn.addEventListener("click", async function () {
+        const promise = await fetch(URL);
+        const data = await promise.json();
+
+        box.innerHTML = "";
+
+        for (let i = 0; i < data.articles.length; i++) {
+          const currentCard = data.articles[i].title.toLowerCase().trim();
+          const int = input.value.trim();
+
+          if (currentCard.includes(int.toLowerCase())) {
+            const card = document.createElement("div");
+            card.innerHTML = `
+            <div class="card">
+          <img src="${data.articles[i].image}" alt="${data.articles[i].image}">
+          <h2>${data.articles[i].title}</h2>
+          <p>${data.articles[i].description}</p>
+          <b>${data.articles[i].tags}</b>
+        </div>
+            `;
+            box.appendChild(card);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

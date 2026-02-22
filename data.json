@@ -1,0 +1,64 @@
+{
+  "articles": [
+    {
+      "title": "Document Object Model",
+      "description": "The DOM is a cross-platform interface that represents XML or HTML documents as a tree structure, with each node as an object.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/DOM-model.svg",
+      "tags": ["HTML", "XML", "Tree Structure", "Web Development"]
+    },
+    {
+      "title": "Windows API",
+      "description": "WinAPI is Microsoft’s core set of application programming interfaces available in Windows operating systems.",
+      "image": "uranus.png",
+      "tags": ["HTML", "XML", "Tree Structure", "Web Development"]
+    },
+    {
+      "title": "Front end and back end",
+      "description": "These terms refer to the separation of concerns between the presentation layer (front end) and the data access layer (back end).",
+      "image": "mars.png",
+      "tags": ["HTML", "XML", "Tree Structure", "Web Development"]
+    },
+    {
+      "title": "API (disambiguation)",
+      "description": "An API is any defined inter-program interface. The term may also refer to other meanings.",
+      "image": "earth.png",
+      "tags": ["HTML", "XML", "Tree Structure", "Web Development"]
+    },
+    {
+      "title": "Representational state transfer",
+      "description": "REST is a software architecture style for interactive applications that use multiple web services under specific constraints.",
+      "image": "planet.png",
+      "tags": ["HTML", "XML", "Tree Structure", "Web Development"]
+    },
+    {
+      "title": "Glide (API)",
+      "description": "Glide is a 3D graphics API developed by 3dfx Interactive for their Voodoo graphics cards.",
+      "image": "mercury.png",
+      "tags": ["HTML", "XML", "Tree Structure", "Web Development"]
+    },
+    {
+      "title": "Google Maps",
+      "description": "Google Maps is a web mapping service developed by Google.",
+      "image": "jupiter.png",
+      "tags": ["HTML", "XML", "Tree Structure", "Web Development"]
+    },
+    {
+      "title": "API gravity",
+      "description": "API gravity is a measure defined by the American Petroleum Institute to compare the density of petroleum liquids.",
+      "image": "uranus.png",
+      "tags": ["HTML", "XML", "Tree Structure", "Web Development"]
+    },
+    {
+      "title": "Apis",
+      "description": "Apis or APIS may refer to multiple meanings, including the genus of honeybees.",
+      "image": "venus.png",
+      "tags": ["HTML", "XML", "Tree Structure", "Web Development"]
+    },
+    {
+      "title": "Web API",
+      "description": "A Web API is an application programming interface for web-based systems.",
+      "image": "planet (1).png",
+      "tags": ["HTML", "XML", "Tree Structure", "Web Development"]
+    }
+  ]
+}
